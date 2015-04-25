@@ -1,0 +1,15 @@
+bin
+/
+gen
+/
+.gradle
+/
+build/
+
+.settings
+/
+target/
+
+*.iml
+
+.idea/

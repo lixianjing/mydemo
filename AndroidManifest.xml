@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.xian.myapp"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="19"/>
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name=".MyApplication">
+        <activity android:name="com.xian.myapp.activities.MyActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.xian.myapp.activities.EventBusTest"
+                  android:label="@string/app_name">
+
+        </activity>
+
+        <activity android:name="com.xian.myapp.activities.EventBusTest1"
+                  android:label="@string/app_name">
+
+        </activity>
+        <service android:name=".services.EventBusRemoteService" android:process=":eventbus"></service>
+        <service android:name=".services.EventBusService" ></service>
+    </application>
+</manifest>

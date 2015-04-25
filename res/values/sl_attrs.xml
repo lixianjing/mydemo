@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--ActionBar背景-->
+    <attr name="bgActionBar" format="color|reference" />
+    <!--底部的标签栏背景-->
+    <attr name="bgBottomTabBar" format="color|reference" />
+    <!--确定按钮的背景-->
+    <attr name="bgBtnOk" format="color|reference" />
+    <!--取消按钮的背景-->
+    <attr name="bgBtnCancel" format="color|reference" />
+
+    <!--标签属性-->
+    <attr name="heightHomeTab" format="dimension|reference" />
+    <attr name="topMarginIcon" format="dimension|reference" />
+    <attr name="bottomMargintxt" format="dimension|reference" />
+    <attr name="colorTabTxt" format="color|reference" />
+
+</resources>

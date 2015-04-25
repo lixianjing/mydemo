@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="ak_translate_duration">350</integer>
+
+    <dimen name="sl_progress_dialog_width">90dp</dimen>
+    <dimen name="sl_progress_dialog_height">90dp</dimen>
+
+    <dimen name="sl_action_bar_default_height">46dip</dimen>
+
+    <!-- 按钮需要有突出的效果，不铺满 -->
+    <dimen name="sl_action_bar_item_width_height">48dip</dimen>
+    <dimen name="sl_action_button_min_width">56dp</dimen>
+</resources>
