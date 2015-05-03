@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <color name="c_action_bar_bg_color">#ff25c56e</color>
+
     <color name="sl_black">#ff000000</color>
     <color name="sl_white">#ffffffff</color>
     <color name="sl_transparent">#00000000</color>

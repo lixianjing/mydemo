@@ -17,7 +17,7 @@ public class MyActivity extends BaseActivity {
      */
     private Context mContext;
     private ListView mListView;
-    private String[] items = new String[]{"eventBus"};
+    private String[] items = new String[]{"eventBus","tabtest"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,11 @@ public class MyActivity extends BaseActivity {
                     case 0:
                         //event bus
                         intent=new Intent(mContext,EventBusTest.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        //tab test
+                        intent=new Intent(mContext,TabMainTest.class);
                         startActivity(intent);
                         break;
                     default:
