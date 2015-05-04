@@ -46,8 +46,7 @@ public class TabMainTest extends BaseActivity {
                         startActivity(intent);
                         break;
                     case 3:
-                        intent=new Intent(mContext,EventBusTest.class);
-                        startActivity(intent);
+   
                         break;
                     default:
                         break;
