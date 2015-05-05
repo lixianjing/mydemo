@@ -63,6 +63,11 @@
                   android:screenOrientation="portrait"
                   android:theme="@style/Theme.CHomePageIndicator">
         </activity>
+        <activity android:name="com.xian.myapp.activities.TabViewPagerGanji"
+                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/Theme.CHomePageIndicator">
+        </activity>
         <!-- tab test end-->
         <!-- tab test start-->
         <!-- tab test end-->

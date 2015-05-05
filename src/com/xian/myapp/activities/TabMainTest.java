@@ -48,10 +48,11 @@ public class TabMainTest extends BaseActivity {
                     case 3:
                         intent=new Intent(mContext,TabViewPager.class);
                         startActivity(intent);
+                        break;
+                    case 4:
+                        intent=new Intent(mContext,TabViewPagerGanji.class);
+                        startActivity(intent);
 
-
-
-                        
 
                         break;
                     default:
