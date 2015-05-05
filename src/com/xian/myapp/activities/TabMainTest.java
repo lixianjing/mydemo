@@ -16,7 +16,7 @@ public class TabMainTest extends BaseActivity {
      */
     private Context mContext;
     private ListView mListView;
-    private String[] items = new String[]{"底部菜单使用RadioGroup(推荐)","底部菜单使用FragmentTabHost(不推荐)","可滑动的tab","赶集tab"};
+    private String[] items = new String[]{"底部菜单使用RadioGroup(推荐)","底部菜单使用FragmentTabHost(不推荐)","底部菜单使用自定义layout(推荐)","可滑动的tab","赶集tab"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,11 +42,12 @@ public class TabMainTest extends BaseActivity {
                         startActivity(intent);
                         break;
                     case 2:
-                        intent=new Intent(mContext,TabViewPager.class);
+                        intent=new Intent(mContext,TabStyle3.class);
                         startActivity(intent);
                         break;
                     case 3:
-
+                        intent=new Intent(mContext,TabViewPager.class);
+                        startActivity(intent);
 
 
 

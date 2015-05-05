@@ -93,4 +93,8 @@
     <!--边框颜色-->
     <color name="sl_wheel_border_color">#dedede</color>
 
+    <color name="c_green_txt_color">#25c56e</color>
+    <color name="c_order_item_black">#666666</color>
+    <color name="c_darker_gray">#aaa</color>
+
 </resources>
