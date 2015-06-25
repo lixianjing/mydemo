@@ -10,7 +10,13 @@
             android:text="Hello World, MyActivity"
             />
     <ListView android:id="@+id/listview"
-            android:layout_width="match_parent" android:layout_height="match_parent">
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:cacheColorHint="@color/sl_transparent"
+            android:divider="@color/sl_seperator_color"
+            android:dividerHeight="0dp"
+            android:fadingEdge="none"
+            android:listSelector="@color/sl_transparent"
+            >
 
     </ListView>
 </LinearLayout>

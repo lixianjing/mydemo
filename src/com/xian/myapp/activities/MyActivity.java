@@ -1,6 +1,5 @@
 package com.xian.myapp.activities;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +16,7 @@ public class MyActivity extends BaseActivity {
      */
     private Context mContext;
     private ListView mListView;
-    private String[] items = new String[]{"eventBus","tabtest"};
+    private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,6 +40,16 @@ public class MyActivity extends BaseActivity {
                         break;
                     case 1:
                         //tab test
+                        intent=new Intent(mContext,TabMainTest.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        //actionbar test
+                        intent=new Intent(mContext,TabMainTest.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        //photo show test
                         intent=new Intent(mContext,TabMainTest.class);
                         startActivity(intent);
                         break;
