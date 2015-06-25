@@ -45,12 +45,12 @@ public class MyActivity extends BaseActivity {
                         break;
                     case 2:
                         //actionbar test
-                        intent=new Intent(mContext,TabMainTest.class);
+                        intent=new Intent(mContext,ActionBarTest.class);
                         startActivity(intent);
                         break;
                     case 3:
                         //photo show test
-                        intent=new Intent(mContext,TabMainTest.class);
+                        intent=new Intent(mContext,PhotoShowTest.class);
                         startActivity(intent);
                         break;
                     default:

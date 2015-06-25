@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 标题栏,包含左侧的返回按钮,右侧的编辑按钮,中间的标题(自定义View), -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/lay_action_bar"
+    android:layout_height="wrap_content"
+    android:background="@color/sl_action_bar_bg_color"
+    android:orientation="vertical">
+
+    <!-- 中间平铺背景区域 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_height="@dimen/sl_action_bar_default_height">
+
+        <!-- ActionBar左侧按钮部分. -->
+        <RelativeLayout
+            android:id="@+id/sl_lay_title_left"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <!-- 左侧图标按钮,根据不同的需求换不同的图标. -->
+            <ImageView
+                style="@style/Widget.SLTheme.Image.ActionButton"
+                android:id="@+id/btn_title_left"
+                android:scaleType="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sl_action_bar_return2"
+                android:visibility="gone" />
+
+            <!-- 左侧文字按钮 -->
+
+            <RelativeLayout
+                android:id="@+id/lay_title_left_btn"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginLeft="4dp"
+                android:minWidth="48dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/Widget.SLTheme.Txt.ActionButton"
+                    android:id="@+id/txt_title_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="返回"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/sl_action_bar_title_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_title_left_msg"
+                    android:text="1"
+                    android:textColor="@color/sl_white"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:padding="4dp"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/txt_title_left"
+                    android:background="@drawable/sl_shape_msg_bg"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--ActionBar右侧按钮部分.-->
+        <LinearLayout
+            android:id="@+id/sl_lay_title_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:minWidth="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <!-- 右侧图标按钮 -->
+            <ImageView
+                style="@style/Widget.SLTheme.Image.ActionButton"
+                android:id="@+id/btn_title_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_marginLeft="3dp"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone" />
+
+            <!-- 右侧文字按钮 -->
+            <TextView
+                style="@style/Widget.SLTheme.Txt.ActionButton"
+                android:id="@+id/txt_title_right"
+                android:layout_marginRight="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@color/sl_action_bar_title_color"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:textStyle="normal"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 中间部分,可以自己设置. -->
+        <RelativeLayout
+            android:id="@+id/sl_lay_title_center"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- 中间标题 -->
+            <LinearLayout
+                android:id="@+id/lay_center_text_container"
+                android:visibility="visible"
+                android:clickable="true"
+                android:focusable="false"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/center_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="洗车"
+                    android:textStyle="normal"
+                    android:textColor="@color/sl_action_bar_title_color"
+                    android:textSize="18sp" />
+                <!-- 标题右侧的小字 -->
+                <TextView
+                    android:id="@+id/center_text_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/sl_action_bar_title_color"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/title_right_drawable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/sl_ic_spinner_normal"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- 搜索输入框 -->
+            <RelativeLayout
+                android:id="@+id/lay_center_input_container"
+                android:visibility="gone"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/edit_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/sl_g_input_bg"
+                    android:hint="@string/sl_search_hint"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="4dip"
+                    android:paddingRight="38dip"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/clear_btn"
+                    android:layout_alignRight="@id/edit_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="4dp"
+                    android:visibility="gone"
+                    android:background="@drawable/sl_close_btn" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--<View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_divier_height"
+        android:background="@drawable/titlebar_shadow"/>-->
+
+</LinearLayout>

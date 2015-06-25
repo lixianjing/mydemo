@@ -96,7 +96,7 @@ public class SLActionBar extends LinearLayout {
     }
 
     private void initActionBar(Context context, AttributeSet attrs, int defStyle) {
-        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.sl_action_bar, this);
+        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.common_action_bar, this);
         mTxtLeftBtn = (TextView) findViewById(R.id.txt_title_left);
         lay_title_left_btn = findViewById(R.id.lay_title_left_btn);
         txt_title_left_msg = (TextView) findViewById(R.id.txt_title_left_msg);

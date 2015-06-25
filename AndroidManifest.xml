@@ -68,8 +68,34 @@
                   android:screenOrientation="portrait"
                   android:theme="@style/Theme.CHomePageIndicator">
         </activity>
+
         <!-- tab test end-->
         <!-- tab test start-->
+        <activity android:name="com.xian.myapp.activities.ActionBarTest"
+                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/Theme.CHomePageIndicator">
+        </activity>
+
+        <activity android:name="com.xian.myapp.activities.ActionBarStyle1"
+                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/Theme.CHomePageIndicator">
+        </activity>
+        <activity android:name="com.xian.myapp.activities.ActionBarStyle2"
+                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/Theme.CHomePageIndicator">
+        </activity>
+
+        <!-- tab test end-->
+        <!-- tab test start-->
+
+        <activity android:name="com.xian.myapp.activities.PhotoShowTest"
+                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/Theme.CHomePageIndicator">
+        </activity>
         <!-- tab test end-->
     </application>
 </manifest>
