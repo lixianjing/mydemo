@@ -19,9 +19,12 @@
         <!-- content layout -->
         <FrameLayout
 
-                android:id="@+id/layout_content"
+                android:id="@+id/com_content_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+            </LinearLayout>
 
 
         </FrameLayout>
