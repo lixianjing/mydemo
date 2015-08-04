@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget"></style>
+
+    <style name="SL.Theme.Light.NoTitleBar" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:textColorPrimaryInverse">@android:color/primary_text_light</item>
+        <item name="android:windowBackground">@color/sl_window_background</item>
+        <item name="android:textAppearance">@style/TextAppearance.SLText</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--定义所有的文本字体颜色,使用最多的.-->
+    <style name="TextAppearance.SLText" parent="Widget">
+        <item name="android:textColor">@color/sl_content_color</item>
+        <!--<item name="android:textSize">16sp</item>-->
+    </style>
+
+    <style name="Theme.SLHomePageIndicator" parent="SL.Theme.Light.NoTitleBar">
+        <item name="vpiIconPageIndicatorStyle">@style/Widget.IconPageIndicator</item>
+        <item name="vpiTabPageIndicatorStyle">@style/Widget.HomeTabPageIndicator</item>
+        <!--<item name="vpiTabBarStyle">@style/Widget.TabBar</item>-->
+        <item name="vpiTabBarStyle">@style/Widget.PublishTabBar</item>
+        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
+
+        <item name="android:windowBackground">@color/sl_window_background</item>
+
+        <item name="bgActionBar">@color/sl_action_bar_bg_color</item>
+        <item name="bgBottomTabBar">#fff8f8f8</item>
+        <item name="bgBtnOk">@color/sl_action_bar_bg_color</item>
+        <item name="bgBtnCancel">@drawable/sl_bg_comment_tab</item>
+
+        <item name="heightHomeTab">62dp</item>
+        <item name="topMarginIcon">4dp</item>
+        <item name="bottomMargintxt">2dp</item>
+        <item name="colorTabTxt">@color/sl_home_tab_txt_color</item>
+    </style>
+
+    <style name="Widget.IconPageIndicator" parent="Widget">
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+    </style>
+
+    <style name="Widget.HomeTabPageIndicator" parent="Widget">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <!--<item name="android:background">@drawable/sl__tab_indicator</item>-->
+        <!--<item name="android:paddingLeft">20dip</item>
+        <item name="android:paddingRight">20dip</item>-->
+        <!--<item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">6dp</item>-->
+        <item name="android:textAppearance">@style/TextAppearance.SLHomeTabPageIndicator</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="TextAppearance.SLHomeTabPageIndicator" parent="Widget">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/sl_home_tab_txt_color</item>
+    </style>
+
+    <style name="CustomCirclePageIndicator">
+        <item name="fillColor">#ff56ba22</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="pageColor">#FFFFFFFF</item>
+        <item name="centered">true</item>
+    </style>
+
+    <style name="Widget.SLTheme.ActionButton" parent="Widget">
+        <!--<item name="android:background">?attr/actionBarItemBackground</item>-->
+        <item name="android:paddingLeft">12dip</item>
+        <item name="android:paddingRight">12dip</item>
+        <item name="android:minWidth">@dimen/sl_action_button_min_width</item>
+        <item name="android:minHeight">@dimen/sl_action_bar_default_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">2</item>
+        <!--<item name="textAllCaps">@bool/abc_config_actionMenuItemAllCaps</item>-->
+
+        <!--<item name="android:windowBackground">@color/fake_white</item>-->
+    </style>
+
+    <style name="Widget.SLTheme.Image.ActionButton" parent="Widget">
+        <!--<item name="android:background">?attr/actionBarItemBackground</item>-->
+        <!--<item name="android:paddingLeft">12dip</item>
+        <item name="android:paddingRight">12dip</item>-->
+        <!--<item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>-->
+        <item name="android:minWidth">@dimen/sl_action_bar_item_width_height</item>
+        <item name="android:minHeight">@dimen/sl_action_bar_item_width_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <!--<item name="textAllCaps">@bool/abc_config_actionMenuItemAllCaps</item>-->
+
+        <!--<item name="android:windowBackground">@color/fake_white</item>-->
+    </style>
+
+    <style name="Widget.SLTheme.Txt.ActionButton" parent="Widget">
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="Widget.PublishTabBar" parent="Widget">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/sl_publish_tab_bg</item>
+        <!--<item name="android:paddingLeft">20dip</item>
+        <item name="android:paddingRight">20dip</item>-->
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.PublishTabPageIndicator</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!--雇员列表的主题,-->
+    <style name="TextAppearance.EmployeeTabPageIndicator" parent="Widget">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/sl_employee_tab_txt_color</item>
+    </style>
+
+    <style name="TextAppearance.PublishTabPageIndicator" parent="Widget">
+        <!--<item name="android:textStyle">bold</item>-->
+        <item name="android:textColor">@color/sl_publish_tab_txt_color</item>
+    </style>
+
+    <style name="sl_publish_btn_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@color/sl_transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="Theme.CHomePageIndicator" parent="C.Theme.Light.NoTitleBar">
+        <item name="vpiIconPageIndicatorStyle">@style/Widget.IconPageIndicator</item>
+        <item name="vpiTabPageIndicatorStyle">@style/Widget.CHomeTabPageIndicator</item>
+        <!--<item name="vpiTabBarStyle">@style/Widget.TabBar</item>-->
+        <item name="vpiTabBarStyle">@style/Widget.PublishTabBar</item>
+        <item name="vpiCirclePageIndicatorStyle">@style/CarCirclePageIndicator</item>
+
+        <item name="android:windowBackground">@color/sl_window_background</item>
+
+        <item name="bgActionBar">@color/c_action_bar_bg_color</item>
+        <item name="bgBottomTabBar">#fff7f7f7</item>
+        <item name="bgBtnOk">@color/sl_action_bar_bg_color</item>
+        <item name="bgBtnCancel">@drawable/sl_bg_comment_tab</item>
+
+        <item name="heightHomeTab">56dp</item>
+        <item name="topMarginIcon">7dp</item>
+        <item name="bottomMargintxt">1dp</item>
+        <item name="colorTabTxt">@color/c_home_tab_txt_color</item>
+    </style>
+
+    <style name="C.Theme.Light.NoTitleBar" parent="@android:style/Theme.Light.NoTitleBar">
+        <!--<item name="android:textColorPrimaryInverse">@android:color/primary_text_dark</item>-->
+        <item name="android:windowBackground">@color/sl_window_background</item>
+        <item name="android:textAppearance">@style/TextAppearance.CText</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextAppearance.CText" parent="Widget">
+        <item name="android:textColor">@color/sl_content_color</item>
+    </style>
+
+    <style name="Widget.CHomeTabPageIndicator" parent="Widget">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <!--<item name="android:background">@drawable/sl__tab_indicator</item>-->
+        <!--<item name="android:paddingLeft">20dip</item>
+        <item name="android:paddingRight">20dip</item>-->
+        <!--<item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">6dp</item>-->
+        <item name="android:textAppearance">@style/TextAppearance.CHomeTabPageIndicator</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="TextAppearance.CHomeTabPageIndicator" parent="Widget">
+        <!--<item name="android:textStyle">bold</item>-->
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/c_home_tab_txt_color</item>
+    </style>
+
+    <style name="CarCirclePageIndicator">
+        <item name="fillColor">#ffffffff</item>
+        <item name="strokeColor">#FFFFFFFF</item>
+        <item name="strokeWidth">1dp</item>
+        <!--<item name="radius">10dp</item>-->
+        <item name="pageColor">#00000000</item>
+        <item name="centered">true</item>
+    </style>
+
+
+    <style name="tab_rb_style">
+        <item name="android:layout_width" >0dp</item>
+        <item name="android:layout_height" >wrap_content</item>
+        <item name="android:layout_weight" >1</item>
+        <item name="android:button" >@null</item>
+        <item name="android:textColor" >@color/tab_selector_tv_color</item>
+        <item name="android:gravity" >center_horizontal|bottom</item>
+        <item name="android:layout_gravity" >bottom</item>
+        <item name="android:background" >@drawable/tab_selector_checked_bg</item>
+    </style>
+
+</resources>

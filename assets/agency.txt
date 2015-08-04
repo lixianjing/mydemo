@@ -1,7 +1,0 @@
-agencyid=agencydefaultid
-test=true
-log=true
-gatsdk.enable=true
-gatsdk.appstate=story
-gatsdk.collectlogcat=true
-gatsdd.collectscreenshot=true

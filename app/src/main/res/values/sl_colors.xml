@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="c_action_bar_bg_color">#ff25c56e</color>
+
+    <color name="sl_black">#ff000000</color>
+    <color name="sl_white">#ffffffff</color>
+    <color name="sl_transparent">#00000000</color>
+
+    <drawable name="sl_g_fake_white">#FFFAFAFA</drawable>
+    <drawable name="sl_g_dark_white">#FFF0F0F0</drawable>
+
+    <color name="sl_high_gray">#FF404040</color>
+    <color name="sl_medium_gray">#FF808080</color>
+    <color name="sl_low_gray">#FFbfbfbf</color>
+    <color name="sl_sub_gray">#FFE6E6E6</color>
+
+    <!-- A transparent black -->
+    <color name="sl_transparent_black">#99000000</color>
+
+    <!-- A semi-transparent dark Holo shade of blue -->
+    <color name="sl_holo_blue_dark">#ff0099cc</color>
+
+    <!-- A light, Holo shade of blue -->
+    <color name="sl_holo_blue_light">#ff33b5e5</color>
+
+    <!-- A light, transparent Holo shade of blue -->
+    <color name="sl_holo_blue_light_transparent">#9933b5e5</color>
+
+    <!-- A light Holo shade of green -->
+    <color name="sl_holo_green_light">#ff99cc00</color>
+
+    <color name="sl_holo_green_reserve">#ff56ba24</color>
+
+    <!-- A light Holo shade of red -->
+    <color name="sl_holo_red_light">#ffff4444</color>
+
+    <!-- A Holo shade of purple -->
+    <color name="sl_holo_purple">#ffaa66cc</color>
+
+    <!-- A light Holo shade of orange -->
+    <color name="sl_holo_orange_light">#ffffbb33</color>
+
+    <!-- A dark Holo shade of orange -->
+    <color name="sl_holo_orange_dark">#ffff8800</color>
+
+    <color name="sl_window_background">#f6f6f6</color>
+
+    <!--列表简介,提示文字-->
+    <color name="sl_introduction_color">#ffbfbfbf</color>
+    <!--详情内容,列表价格,发布表单,二级tab,二级大类,列表标题,详情标题,联系人-->
+    <color name="sl_content_color">#ff404040</color>
+
+    <!--分割线-->
+    <color name="sl_seperator_color">#ffe6e6e6</color>
+
+    <!-- 标题字体的颜色. -->
+    <color name="sl_action_bar_title_color">#ffffffff</color>
+    <color name="sl_action_bar_bg_color">#ff25c56e</color>
+
+    <color name="sl_hight_color">#fff55100</color>
+    <color name="sl_city_item_color">#ff56ba22</color>
+    <color name="sl_fake_white">#FFFAFAFA</color>
+
+    <color name="sl_home_sub_category_seperator_color">#ffd9ded7</color>
+
+    <!--验证 电话号码的 按钮文字-->
+    <color name="sl_request_code_disabled_color">#ffadadad</color>
+    <color name="sl_request_code_enable_color">#ff6cbc60</color>
+
+    <color name="sl_notice_unread">@color/sl_action_bar_title_color</color>
+    <color name="sl_notice_read">@color/sl_introduction_color</color>
+    <color name="sl_notice_content">#888888</color>
+
+    <color name="sl_home_tab_txt">#ff717171</color>
+    <color name="sl_home_tab_selected_txt">#ff56ba22</color>
+
+    <!--垂直化发布页-->
+    <color name="sl_publish_header_bg">#fff5f5f5</color>
+    <color name="sl_publish_tip_color">#ffacacac</color>
+    <color name="sl_publish_txt_hint_color">#ffc7d4ca</color>
+    <color name="sl_publish_txt_color">#ff3d4245</color>
+    <color name="sl_publish_item_title_color">#ff56ba24</color>
+
+    <color name="sl_publish_info_color">#ff666666</color>
+    <color name="sl_publish_tab_txt_normal_color">#ff56ba24</color>
+    <color name="sl_publish_tab_txt_selected_color">#ffffffff</color>
+
+    <!--未选中的项颜色-->
+    <color name="sl_wheel_item_color">#ff9e9e9e</color>
+    <!--选中的项颜色-->
+    <color name="sl_wheel_value_color">#FF252927</color>
+    <!--边框颜色-->
+    <color name="sl_wheel_border_color">#dedede</color>
+
+    <color name="c_green_txt_color">#25c56e</color>
+    <color name="c_order_item_black">#666666</color>
+    <color name="c_darker_gray">#aaa</color>
+
+</resources>
