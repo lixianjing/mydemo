@@ -3,12 +3,14 @@ package com.xian.myapp.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.xian.myapp.R;
 import com.xian.myapp.base.BaseActivity;
+import com.xian.myapp.openapi.OpenApiController;
 
 public class MyActivity extends BaseActivity {
     /**
@@ -17,12 +19,16 @@ public class MyActivity extends BaseActivity {
     private Context mContext;
     private ListView mListView;
     private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show"};
-
+   private Handler mHandler = new Handler();
+    // open api
+    private static final int OPEN_API_DELAY = 100;//毫秒
+    private OpenApiController openApiController;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         mContext=this;
+        openApiController = new OpenApiController(this);
         mListView = (ListView) findViewById(R.id.listview);
         mListView.setAdapter(new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, items));
@@ -58,5 +64,29 @@ public class MyActivity extends BaseActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        openApiController = new OpenApiController(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        openAPI();
+    }
+
+    /**
+     * 延时触发openAPI,给主页有足够得时间去渲染
+     */
+    public void openAPI() {
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                openApiController.execute();
+            }
+        }, OPEN_API_DELAY);
     }
 }
