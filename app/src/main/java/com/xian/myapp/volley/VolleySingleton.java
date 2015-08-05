@@ -1,5 +1,9 @@
 package com.xian.myapp.volley;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.support.v4.util.LruCache;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
@@ -8,16 +12,14 @@ import com.android.volley.toolbox.Volley;
 /**
  * Created by limingfeng on 2015/8/5.
  */
-public class MySingleton {
-    private static MySingleton mInstance;
+public class VolleySingleton {
+    private static VolleySingleton mInstance;
     private RequestQueue mRequestQueue;
     private ImageLoader mImageLoader;
-    private static Context mCtx;
-
-    private MySingleton(Context context) {
-        mCtx = context;
-        mRequestQueue = getRequestQueue();
-
+    private Context mContext;
+    private VolleySingleton(Context context) {
+        mContext=context.getApplicationContext();
+        mRequestQueue = Volley.newRequestQueue(mContext.getApplicationContext());
         mImageLoader = new ImageLoader(mRequestQueue,
                 new ImageLoader.ImageCache() {
                     private final LruCache<String, Bitmap>
@@ -35,24 +37,17 @@ public class MySingleton {
                 });
     }
 
-    public static synchronized MySingleton getInstance(Context context) {
+    public static synchronized VolleySingleton getInstance(Context context) {
         if (mInstance == null) {
-            mInstance = new MySingleton(context);
+            mInstance = new VolleySingleton(context);
         }
         return mInstance;
     }
 
-    public RequestQueue getRequestQueue() {
-        if (mRequestQueue == null) {
-            // getApplicationContext() is key, it keeps you from leaking the
-            // Activity or BroadcastReceiver if someone passes one in.
-            mRequestQueue = Volley.newRequestQueue(mCtx.getApplicationContext());
-        }
-        return mRequestQueue;
-    }
+
 
     public <T> void addToRequestQueue(Request<T> req) {
-        getRequestQueue().add(req);
+        mRequestQueue.add(req);
     }
 
     public ImageLoader getImageLoader() {

@@ -27,8 +27,8 @@ import java.util.Locale;
 public class VolleyLog {
     public static String TAG = "Volley";
 
-    public static boolean DEBUG = Log.isLoggable(TAG, Log.VERBOSE);
-
+//    public static boolean DEBUG = Log.isLoggable(TAG, Log.VERBOSE);
+public static boolean DEBUG = true;
     /**
      * Customize the log tag for your application, so that other apps
      * using Volley don't mix their logs with yours.
@@ -42,7 +42,7 @@ public class VolleyLog {
         TAG = tag;
 
         // Reinitialize the DEBUG "constant"
-        DEBUG = Log.isLoggable(TAG, Log.VERBOSE);
+//        DEBUG = Log.isLoggable(TAG, Log.VERBOSE);
     }
 
     public static void v(String format, Object... args) {
