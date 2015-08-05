@@ -24,4 +24,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile project(':mylibrary')
     compile files('libs/eventbus-2.4.0.jar')
+    compile project(':android-volley')
 }

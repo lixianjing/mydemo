@@ -11,6 +11,7 @@ import android.widget.ListView;
 import com.xian.myapp.R;
 import com.xian.myapp.base.BaseActivity;
 import com.xian.myapp.openapi.OpenApiController;
+import com.xian.myapp.volley.VolleyActivity;
 
 public class MyActivity extends BaseActivity {
     /**
@@ -18,7 +19,7 @@ public class MyActivity extends BaseActivity {
      */
     private Context mContext;
     private ListView mListView;
-    private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show"};
+    private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show","volley"};
    private Handler mHandler = new Handler();
     // open api
     private static final int OPEN_API_DELAY = 100;//∫¡√Î
@@ -57,6 +58,11 @@ public class MyActivity extends BaseActivity {
                     case 3:
                         //photo show test
                         intent=new Intent(mContext,PhotoShowTest.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        //photo show test
+                        intent=new Intent(mContext,VolleyActivity.class);
                         startActivity(intent);
                         break;
                     default:

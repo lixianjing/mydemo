@@ -4,6 +4,8 @@
           android:versionCode="1"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="19"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name=".MyApplication">
         <activity android:name="com.xian.myapp.activities.MyActivity"
                   android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
@@ -103,5 +105,13 @@
                   android:theme="@style/Theme.CHomePageIndicator">
         </activity>
         <!-- tab test end-->
+
+        <!-- volley test start-->
+        <activity android:name="com.xian.myapp.volley.VolleyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator">
+        </activity>
+        <!-- volley test end-->
     </application>
 </manifest>

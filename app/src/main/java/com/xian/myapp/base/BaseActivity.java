@@ -3,6 +3,7 @@ package com.xian.myapp.base;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
@@ -55,6 +56,8 @@ public class BaseActivity extends FragmentActivity {
 
     protected boolean mApplicationStopedUnexpectedly;
 
+    protected Context mContext;
+
     /**
      * 默认进入 activity 的动画，如果什么都不设置，退出动画是 R.anim.activity_slide_out_right
      */
@@ -63,6 +66,7 @@ public class BaseActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext=this;
         mIsCustomDialog = customDialogLayoutResID > 0;
 
         overridePendingTransition(R.anim.anim_enter_right, R.anim.anim_leave_left);
