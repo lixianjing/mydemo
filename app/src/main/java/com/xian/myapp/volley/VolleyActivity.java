@@ -6,10 +6,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.android.volley.Cache;
+import com.android.volley.Network;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.BasicNetwork;
+import com.android.volley.toolbox.DiskBasedCache;
+import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.xian.myapp.R;
@@ -22,7 +27,7 @@ public class VolleyActivity extends BaseActivity {
 
 
     private TextView mTextView;
-    private Button mBtn;
+    private Button mBtn,clearBtn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,11 +35,24 @@ public class VolleyActivity extends BaseActivity {
         setContentView(R.layout.volley_activity);
         mTextView = (TextView) findViewById(R.id.text);
         mBtn = (Button) findViewById(R.id.btn);
+        clearBtn = (Button) findViewById(R.id.clear_btn);
         mBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Instantiate the RequestQueue.
                 RequestQueue queue = Volley.newRequestQueue(mContext);
+                //不是必须的
+                // Instantiate the cache
+                Cache cache = new DiskBasedCache(getCacheDir(), 1024 * 1024); // 1MB cap
+
+                // Set up the network to use HttpURLConnection as the HTTP client.
+                Network network = new BasicNetwork(new HurlStack());
+
+                // Instantiate the RequestQueue with the cache and network.
+                RequestQueue  mRequestQueue = new RequestQueue(cache, network);
+                //自定义的需要启动
+                mRequestQueue.start();
+
                 String url = "http://www.baidu.com";
 
                 // Request a string response from the provided URL.
@@ -51,8 +69,19 @@ public class VolleyActivity extends BaseActivity {
                         mTextView.setText("That didn't work!");
                     }
                 });
+
+
+
                 // Add the request to the RequestQueue.
-                queue.add(stringRequest);
+                mRequestQueue.add(stringRequest);
+
+            }
+        });
+
+        clearBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mTextView.setText("clear");
             }
         });
     }
