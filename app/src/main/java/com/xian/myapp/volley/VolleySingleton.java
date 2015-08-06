@@ -2,7 +2,6 @@ package com.xian.myapp.volley;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.v4.util.LruCache;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -21,20 +20,7 @@ public class VolleySingleton {
         mContext=context.getApplicationContext();
         mRequestQueue = Volley.newRequestQueue(mContext.getApplicationContext());
         mImageLoader = new ImageLoader(mRequestQueue,
-                new ImageLoader.ImageCache() {
-                    private final LruCache<String, Bitmap>
-                            cache = new LruCache<String, Bitmap>(20);
-
-                    @Override
-                    public Bitmap getBitmap(String url) {
-                        return cache.get(url);
-                    }
-
-                    @Override
-                    public void putBitmap(String url, Bitmap bitmap) {
-                        cache.put(url, bitmap);
-                    }
-                });
+               new CustomImageCache());
     }
 
     public static synchronized VolleySingleton getInstance(Context context) {
@@ -45,7 +31,6 @@ public class VolleySingleton {
     }
 
 
-
     public <T> void addToRequestQueue(Request<T> req) {
         mRequestQueue.add(req);
     }
@@ -53,4 +38,6 @@ public class VolleySingleton {
     public ImageLoader getImageLoader() {
         return mImageLoader;
     }
+
+
 }
