@@ -113,5 +113,12 @@
             android:theme="@style/Theme.CHomePageIndicator">
         </activity>
         <!-- volley test end-->
+        <!-- touch test start-->
+        <activity android:name="com.xian.myapp.activities.TouchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator">
+        </activity>
+        <!-- touch test end-->
     </application>
 </manifest>

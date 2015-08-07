@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -19,7 +20,7 @@ public class MyActivity extends BaseActivity {
      */
     private Context mContext;
     private ListView mListView;
-    private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show","volley"};
+    private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show","volley","ontouch test"};
    private Handler mHandler = new Handler();
     // open api
     private static final int OPEN_API_DELAY = 100;//∫¡√Î
@@ -65,6 +66,11 @@ public class MyActivity extends BaseActivity {
                         intent=new Intent(mContext,VolleyActivity.class);
                         startActivity(intent);
                         break;
+                    case 5:
+                        //photo show test
+                        intent=new Intent(mContext,TouchActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                         break;
                 }
@@ -95,4 +101,15 @@ public class MyActivity extends BaseActivity {
             }
         }, OPEN_API_DELAY);
     }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return super.onTouchEvent(event);
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        return super.dispatchTouchEvent(ev);
+    }
+
 }
