@@ -20,10 +20,10 @@ public class MyActivity extends BaseActivity {
      */
     private Context mContext;
     private ListView mListView;
-    private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show","volley","ontouch test"};
+    private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show","volley","ontouch test","upload /download"};
    private Handler mHandler = new Handler();
     // open api
-    private static final int OPEN_API_DELAY = 100;//ºÁÃë
+    private static final int OPEN_API_DELAY = 100;//ï¿½ï¿½ï¿½ï¿½
     private OpenApiController openApiController;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -70,6 +70,10 @@ public class MyActivity extends BaseActivity {
                         //photo show test
                         intent=new Intent(mContext,TouchActivity.class);
                         startActivity(intent);
+                    case 6:
+                        //photo show test
+                        intent=new Intent(mContext,UpLoadAndDownLoadActivity.class);
+                        startActivity(intent);
                         break;
                     default:
                         break;
@@ -91,7 +95,7 @@ public class MyActivity extends BaseActivity {
     }
 
     /**
-     * ÑÓÊ±´¥·¢openAPI,¸øÖ÷Ò³ÓÐ×ã¹»µÃÊ±¼äÈ¥äÖÈ¾
+     * ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½openAPI,ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ã¹»ï¿½ï¿½Ê±ï¿½ï¿½È¥ï¿½ï¿½È¾
      */
     public void openAPI() {
         mHandler.postDelayed(new Runnable() {

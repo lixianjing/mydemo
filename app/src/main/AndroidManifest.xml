@@ -120,5 +120,13 @@
             android:theme="@style/Theme.CHomePageIndicator">
         </activity>
         <!-- touch test end-->
+
+        <!-- upload download test start-->
+        <activity android:name="com.xian.myapp.activities.UpLoadAndDownLoadActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator">
+        </activity>
+        <!-- upload download end-->
     </application>
 </manifest>

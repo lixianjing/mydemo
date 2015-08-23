@@ -26,10 +26,10 @@ public class CustomImageCache implements ImageLoader.ImageCache {
 
     private static final String DISK_CACHE_NAME = "bitmap";
     private static final int DISK_CACHE_MAX = 10 * 1024 * 1024;
-    //获取系统分配给每个应用程序的最大内存，每个应用系统分配32M
+
     int maxMemory = (int) Runtime.getRuntime().maxMemory();
     int mCacheSize = maxMemory / 8;
-    //给LruCache分配1/8 4M
+
     private final LruCache<String, Bitmap>
             cache = new LruCache<String, Bitmap>(mCacheSize);
 
@@ -101,7 +101,7 @@ public class CustomImageCache implements ImageLoader.ImageCache {
                             editor.abort();
                         }
                     }
-                    //不用每次都调用该方法
+                    //锟斤拷锟斤拷每锟轿讹拷锟斤拷锟矫该凤拷锟斤拷
                     //mDiskLruCache.flush();
 
                 }
@@ -132,7 +132,7 @@ public class CustomImageCache implements ImageLoader.ImageCache {
     }
 
 
-    //该方法会判断当前sd卡是否存在，然后选择缓存地址
+    //锟矫凤拷锟斤拷锟斤拷锟叫断碉拷前sd锟斤拷锟角凤拷锟斤拷冢锟饺伙拷锟窖★拷窕捍锟斤拷址
     public File getDiskCacheDir(Context context, String uniqueName) {
         String cachePath;
         if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())
@@ -144,7 +144,7 @@ public class CustomImageCache implements ImageLoader.ImageCache {
         return new File(cachePath + File.separator + uniqueName);
     }
 
-    //获得应用version号码
+    //锟斤拷锟接︼拷锟絭ersion锟斤拷锟斤拷
     public int getAppVersion(Context context) {
         try {
             PackageInfo info = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);

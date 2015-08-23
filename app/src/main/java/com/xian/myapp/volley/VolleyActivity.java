@@ -51,7 +51,7 @@ public class VolleyActivity extends BaseActivity {
             public void onClick(View v) {
                 // Instantiate the RequestQueue.
                 RequestQueue queue = Volley.newRequestQueue(mContext);
-                //²»ÊÇ±ØÐëµÄ
+                //ï¿½ï¿½ï¿½Ç±ï¿½ï¿½ï¿½ï¿½
                 // Instantiate the cache
                 Cache cache = new DiskBasedCache(getCacheDir(), 1024 * 1024); // 1MB cap
 
@@ -60,7 +60,7 @@ public class VolleyActivity extends BaseActivity {
 
                 // Instantiate the RequestQueue with the cache and network.
                 RequestQueue mRequestQueue = new RequestQueue(cache, network);
-                //×Ô¶¨ÒåµÄÐèÒªÆô¶¯
+                //ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
                 mRequestQueue.start();
 
 
