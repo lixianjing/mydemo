@@ -130,6 +130,9 @@ public class VolleyActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 mTextView.setText("clear");
+
+                mImageView.setImageResource(R.drawable.sl_bg_comment_tab);
+                mNetImageView.setImageResource(R.drawable.sl_bg_comment_tab);
             }
         });
     }
