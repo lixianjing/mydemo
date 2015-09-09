@@ -1,132 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.xian.myapp"
-          android:versionCode="1"
-          android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="19"/>
+    package="com.xian.myapp"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name=".MyApplication">
-        <activity android:name="com.xian.myapp.activities.MyActivity"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:launchMode="singleTask"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
+    <application
+        android:name=".MyApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name">
+        <activity
+            android:name="com.xian.myapp.activities.MyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="gjcw"/>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="gjcw" />
             </intent-filter>
         </activity>
         <!-- eventbus start -->
-        <activity android:name="com.xian.myapp.activities.EventBusTest"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
+        <activity
+            android:name="com.xian.myapp.activities.EventBusTest"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator">
 
         </activity>
 
-        <activity android:name="com.xian.myapp.activities.EventBusTest1"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
+        <activity
+            android:name="com.xian.myapp.activities.EventBusTest1"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator">
 
         </activity>
-        <service android:name=".services.EventBusRemoteService" android:process=":eventbus"></service>
-        <service android:name=".services.EventBusService" ></service>
+
+        <service
+            android:name=".services.EventBusRemoteService"
+            android:process=":eventbus"></service>
+        <service android:name=".services.EventBusService"></service>
         <!-- eventbus end -->
         <!-- tab test start-->
-        <activity android:name="com.xian.myapp.activities.TabMainTest"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
-                </activity>
-        <activity android:name="com.xian.myapp.activities.TabStyle1"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
-        <activity android:name="com.xian.myapp.activities.TabStyle2"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
-        <activity android:name="com.xian.myapp.activities.TabStyle3"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
-        <activity android:name="com.xian.myapp.activities.TabViewPager"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
-        <activity android:name="com.xian.myapp.activities.TabSecondActivity"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
-        <activity android:name="com.xian.myapp.activities.TabViewPagerGanji"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
+        <activity
+            android:name="com.xian.myapp.activities.TabMainTest"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.TabStyle1"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.TabStyle2"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.TabStyle3"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.TabViewPager"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.TabSecondActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.TabViewPagerGanji"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
 
         <!-- tab test end-->
         <!-- tab test start-->
-        <activity android:name="com.xian.myapp.activities.ActionBarTest"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
+        <activity
+            android:name="com.xian.myapp.activities.ActionBarTest"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
 
-        <activity android:name="com.xian.myapp.activities.ActionBarStyle1"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
-        <activity android:name="com.xian.myapp.activities.ActionBarStyle2"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
+        <activity
+            android:name="com.xian.myapp.activities.ActionBarStyle1"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.ActionBarStyle2"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
 
         <!-- tab test end-->
         <!-- tab test start-->
 
-        <activity android:name="com.xian.myapp.activities.PhotoShowTest"
-                  android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
+        <activity
+            android:name="com.xian.myapp.activities.PhotoShowTest"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
         <!-- tab test end-->
 
         <!-- volley test start-->
-        <activity android:name="com.xian.myapp.volley.VolleyActivity"
+        <activity
+            android:name="com.xian.myapp.volley.VolleyActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
         <!-- volley test end-->
         <!-- touch test start-->
-        <activity android:name="com.xian.myapp.activities.TouchActivity"
+        <activity
+            android:name="com.xian.myapp.activities.TouchActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
         <!-- touch test end-->
 
         <!-- upload download test start-->
-        <activity android:name="com.xian.myapp.activities.UpLoadAndDownLoadActivity"
+        <activity
+            android:name="com.xian.myapp.activities.UpLoadAndDownLoadActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.CHomePageIndicator">
-        </activity>
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
         <!-- upload download end-->
+
+        <!-- catchException-->
+        <activity
+            android:name="com.xian.myapp.activities.UnCatchExceptionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <!-- catchException-->
+
+        <!-- fragment-->
+        <activity
+            android:name="com.xian.myapp.activities.MyFragmentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.MyFragmentActivity1"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.MyFragmentActivity2"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.MyFragmentActivity3"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <!-- fragment-->
+        <!-- view-->
+        <activity
+            android:name="com.xian.myapp.activities.ViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <!-- fragment-->
+
+
     </application>
 </manifest>

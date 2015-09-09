@@ -1,6 +1,7 @@
 package com.xian.myapp.activities;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -38,9 +39,9 @@ public class TouchActivity extends BaseActivity {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.e("lmf",  "TouchActivity>onTouchEvent>" + event.getAction());
+        Log.e("lmf", "TouchActivity>onTouchEvent>" + event.getAction());
         boolean result=super.onTouchEvent(event);
-        Log.e("lmf","TouchActivity>onTouchEvent>result>>"+result);
+        Log.e("lmf", "TouchActivity>onTouchEvent>result>>" + result);
         return result;
     }
 
@@ -50,5 +51,11 @@ public class TouchActivity extends BaseActivity {
         boolean result=super.dispatchTouchEvent(ev);
         Log.e("lmf","TouchActivity>dispatchTouchEvent>result>>"+result);
         return result;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        Log.e("lmf",">>>>>onSaveInstanceState>>>>>>");
     }
 }

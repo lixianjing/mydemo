@@ -3,6 +3,7 @@ package com.xian.myapp.volley;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -51,7 +52,6 @@ public class VolleyActivity extends BaseActivity {
             public void onClick(View v) {
                 // Instantiate the RequestQueue.
                 RequestQueue queue = Volley.newRequestQueue(mContext);
-                //���Ǳ����
                 // Instantiate the cache
                 Cache cache = new DiskBasedCache(getCacheDir(), 1024 * 1024); // 1MB cap
 
@@ -60,7 +60,7 @@ public class VolleyActivity extends BaseActivity {
 
                 // Instantiate the RequestQueue with the cache and network.
                 RequestQueue mRequestQueue = new RequestQueue(cache, network);
-                //�Զ������Ҫ����
+
                 mRequestQueue.start();
 
 
@@ -135,5 +135,17 @@ public class VolleyActivity extends BaseActivity {
                 mNetImageView.setImageResource(R.drawable.sl_bg_comment_tab);
             }
         });
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        Log.e("lmf", ">>>>>onSaveInstanceState>>>111>>>");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.e("lmf", ">>>>>onSaveInstanceState>>>2222>>>");
     }
 }

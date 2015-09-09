@@ -4,15 +4,22 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.PersistableBundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import com.xian.myapp.R;
 import com.xian.myapp.base.BaseActivity;
 import com.xian.myapp.openapi.OpenApiController;
+import com.xian.myapp.services.TestService;
 import com.xian.myapp.volley.VolleyActivity;
+
+import java.io.File;
 
 public class MyActivity extends BaseActivity {
     /**
@@ -20,10 +27,10 @@ public class MyActivity extends BaseActivity {
      */
     private Context mContext;
     private ListView mListView;
-    private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show","volley","ontouch test","upload /download"};
+    private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show","volley","ontouch test","upload /download","uncaughtException","fragment","viewStub include merge"};
    private Handler mHandler = new Handler();
     // open api
-    private static final int OPEN_API_DELAY = 100;//����
+    private static final int OPEN_API_DELAY = 100;
     private OpenApiController openApiController;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -70,10 +77,29 @@ public class MyActivity extends BaseActivity {
                         //photo show test
                         intent=new Intent(mContext,TouchActivity.class);
                         startActivity(intent);
+                        break;
                     case 6:
                         //photo show test
                         intent=new Intent(mContext,UpLoadAndDownLoadActivity.class);
                         startActivity(intent);
+                        break;
+                    case 7:
+                        //uncaughtException
+                        intent=new Intent(mContext,UnCatchExceptionActivity.class);
+                        startActivity(intent);
+
+                        break;
+                    case 8:
+                        //fragment
+                        intent=new Intent(mContext,MyFragmentActivity.class);
+                        startActivity(intent);
+
+                        break;
+                    case 9:
+                        //fragment
+                        intent=new Intent(mContext,ViewActivity.class);
+                        startActivity(intent);
+
                         break;
                     default:
                         break;
@@ -94,9 +120,7 @@ public class MyActivity extends BaseActivity {
         openAPI();
     }
 
-    /**
-     * ��ʱ����openAPI,����ҳ���㹻��ʱ��ȥ��Ⱦ
-     */
+
     public void openAPI() {
         mHandler.postDelayed(new Runnable() {
             @Override
@@ -116,4 +140,10 @@ public class MyActivity extends BaseActivity {
         return super.dispatchTouchEvent(ev);
     }
 
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.e("lmf",">>>>>onSaveInstanceState>>>>>>");
+    }
 }

@@ -10,9 +10,12 @@ import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.xian.myapp.MyApplication;
 import com.xian.myapp.R;
 import com.xian.myapp.utils.SLNavigation;
 
@@ -70,6 +73,8 @@ public class BaseActivity extends FragmentActivity {
         mIsCustomDialog = customDialogLayoutResID > 0;
 
         overridePendingTransition(R.anim.anim_enter_right, R.anim.anim_leave_left);
+        ((MyApplication)getApplication()).addActivity(this);
+        Log.e("lmf",">>>>>onCreate>>>>"+this);
     }
 
     private void configCloseAnimation() {
@@ -98,12 +103,15 @@ public class BaseActivity extends FragmentActivity {
     public void onBackPressed() {
         super.onBackPressed();
         configCloseAnimation();
+        ((MyApplication)getApplication()).removeActivity(this);
+        Log.e("lmf",">>>>>onBackPressed>>>>"+this);
     }
 
     @Override
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.anim_enter_left, R.anim.anim_leave_right);
+        Log.e("lmf",">>>>>finish>>>>"+this);
     }
 
     /**
