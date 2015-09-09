@@ -180,8 +180,35 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.CHomePageIndicator"></activity>
 
-        <!-- fragment-->
+        <!-- view-->
+        <!-- swipe -->
+        <activity
+            android:name="com.xian.myapp.activities.SwipeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.swipe.GridViewExample"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.swipe.ListViewCursorExample"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.swipe.ListViewExample"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.swipe.NestedExample"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
 
+        <!-- swipe -->
 
     </application>
 </manifest>

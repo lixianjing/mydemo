@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.xian.myapp.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="80dp">
+    <LinearLayout
+        android:tag="Bottom1"
+        android:background="#66ddff00"
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="160dp"
+        android:weightSum="1"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/archive"
+            android:textColor="#fff"
+            android:text="Archive"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:background="#FF1300"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/delete"
+            android:text="Delete"
+            android:background="#C7C7CC"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:tag="Hover"
+            android:text="瑕佹湁鏈�妯哥礌鐨勭敓娲诲拰鏈�閬欓仩鐨勫あ鎯筹紝鍗充娇鏄庡ぉ澶╁瘨鍦板噸锛屽北楂樻按閬狅紝璺仩棣骸銆�"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</com.xian.myapp.swipe.SwipeLayout>
