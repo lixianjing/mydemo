@@ -52,7 +52,7 @@ public class MyLayout2 extends RelativeLayout{
         Log.e("lmf",TAG+">onTouchEvent>"+event.getAction());
         boolean result=super.onTouchEvent(event);
         Log.e("lmf",TAG+">onTouchEvent>result>>"+result);
-        return false;
+        return result;
     }
 
     @Override
