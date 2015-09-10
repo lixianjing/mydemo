@@ -6,6 +6,7 @@ import android.app.Application;
 import android.content.Context;
 import com.xian.myapp.logs.SLLog;
 import com.xian.myapp.utils.CrashHandler;
+import com.xian.myapp.utils.Envi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();    //调用父类
         sContext=this;
+        Envi.initialize(this);
         if(shouldInit()){
             SLLog.e("lmf",">>>>>MyApplication>>>>>onCreate>>isfirst>>");
 //            init();
