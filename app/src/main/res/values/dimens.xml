@@ -2,6 +2,7 @@
 <resources>
     <integer name="ak_translate_duration">350</integer>
 
+    <dimen name="activity_vertical_margin">8dp</dimen>
     <dimen name="sl_progress_dialog_width">90dp</dimen>
     <dimen name="sl_progress_dialog_height">90dp</dimen>
 

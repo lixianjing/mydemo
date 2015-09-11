@@ -27,7 +27,7 @@ public class MyActivity extends BaseActivity {
      */
     private Context mContext;
     private ListView mListView;
-    private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show","volley","ontouch test","upload /download","uncaughtException","fragment","viewStub include merge","swipe","webview","md5"};
+    private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show","volley","ontouch test","upload /download","uncaughtException","fragment","viewStub include merge","swipe","webview","md5","recyclerView"};
    private Handler mHandler = new Handler();
     // open api
     private static final int OPEN_API_DELAY = 100;
@@ -113,6 +113,12 @@ public class MyActivity extends BaseActivity {
                     case 12:
                         // md5
                         intent=new Intent(mContext,MD5Activity.class);
+                        startActivity(intent);
+
+                        break;
+                    case 13:
+                        // RecyclerActivity
+                        intent=new Intent(mContext,RecyclerActivity.class);
                         startActivity(intent);
 
                         break;

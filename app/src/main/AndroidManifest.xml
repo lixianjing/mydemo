@@ -231,5 +231,14 @@
             android:theme="@style/Theme.CHomePageIndicator"></activity>
 
         <!-- md5-->
+
+        <!-- recycler-->
+        <activity
+            android:name="com.xian.myapp.activities.RecyclerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <!-- md5-->
     </application>
 </manifest>
