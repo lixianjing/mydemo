@@ -239,6 +239,23 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.CHomePageIndicator"></activity>
 
-        <!-- md5-->
+        <!-- recycler -->
+
+        <!-- jni-->
+        <activity
+            android:name="com.xian.myapp.activities.JNIActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <!-- jni -->
+        <!-- ok http -->
+        <activity
+            android:name="com.xian.myapp.activities.OkHttpActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <!--  ok http -->
     </application>
 </manifest>

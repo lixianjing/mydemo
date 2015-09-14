@@ -17,3 +17,5 @@ gradle/
 gradlew
 gradlew.bat
 captures/
+app/obj/
+app/src/main/obj

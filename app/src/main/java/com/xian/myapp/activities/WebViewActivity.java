@@ -76,6 +76,8 @@ public class WebViewActivity extends BaseActivity {
                     break;
                 case R.id.web_refresh:
                     mWebView.reload();
+
+
                     break;
                 default:
                     break;

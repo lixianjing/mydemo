@@ -17,6 +17,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+
+            jniLibs.srcDirs = ['libs']
+
+        }
+
+
+
+    }
 }
 
 dependencies {
@@ -25,4 +36,5 @@ dependencies {
     compile files('libs/eventbus-2.4.0.jar')
     compile project(':android-volley')
     compile files('libs/android-support-v7-recyclerview.jar')
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
 }
