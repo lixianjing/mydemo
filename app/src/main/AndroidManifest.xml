@@ -257,5 +257,36 @@
             android:theme="@style/Theme.CHomePageIndicator"></activity>
 
         <!--  ok http -->
+        <!-- ok animation -->
+        <activity
+            android:name="com.xian.myapp.activities.AnimationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.AnimationViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.AnimationDrawableActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+        <activity
+            android:name="com.xian.myapp.activities.AnimationPropertyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <!--  ok animation -->
+        <!--  ok animation -->
+        <activity
+            android:name="com.xian.myapp.activities.MyViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <!--  ok animation -->
     </application>
 </manifest>

@@ -4,30 +4,25 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.xian.myapp.R;
 import com.xian.myapp.base.BaseActivity;
 import com.xian.myapp.openapi.OpenApiController;
-import com.xian.myapp.services.TestService;
 import com.xian.myapp.volley.VolleyActivity;
 
-import java.io.File;
-
-public class MyActivity extends BaseActivity {
+public class AnimationPropertyActivity extends BaseActivity {
     /**
      * Called when the activity is first created.
      */
     private Context mContext;
     private ListView mListView;
-    private String[] items = new String[]{"eventBus","tabtest","actionbar","photo show","volley","ontouch test","upload /download","uncaughtException","fragment","viewStub include merge","swipe","webview","md5","recyclerView","JNI","okHttp","AnimationActivity","View activity"};
+    private String[] items = new String[]{"view animation","drawable animation","property animation"};
    private Handler mHandler = new Handler();
     // open api
     private static final int OPEN_API_DELAY = 100;
@@ -132,18 +127,6 @@ public class MyActivity extends BaseActivity {
                     case 15:
                         // jni
                         intent=new Intent(mContext,OkHttpActivity.class);
-                        startActivity(intent);
-
-                        break;
-                    case 16:
-                        // jni
-                        intent=new Intent(mContext,AnimationActivity.class);
-                        startActivity(intent);
-
-                        break;
-                    case 17:
-                        // jni
-                        intent=new Intent(mContext,MyViewActivity.class);
                         startActivity(intent);
 
                         break;
