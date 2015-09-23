@@ -101,7 +101,7 @@ public class CustomImageCache implements ImageLoader.ImageCache {
                             editor.abort();
                         }
                     }
-                    //����ÿ�ζ����ø÷���
+                    //没必要每次都 flush
                     //mDiskLruCache.flush();
 
                 }
@@ -132,7 +132,6 @@ public class CustomImageCache implements ImageLoader.ImageCache {
     }
 
 
-    //�÷������жϵ�ǰsd���Ƿ���ڣ�Ȼ��ѡ�񻺴��ַ
     public File getDiskCacheDir(Context context, String uniqueName) {
         String cachePath;
         if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())

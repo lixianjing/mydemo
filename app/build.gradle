@@ -37,4 +37,5 @@ dependencies {
     compile project(':android-volley')
     compile files('libs/android-support-v7-recyclerview.jar')
     compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile files('libs/gson-2.2.2.jar')
 }
