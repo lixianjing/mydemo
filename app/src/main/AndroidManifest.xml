@@ -288,5 +288,13 @@
             android:theme="@style/Theme.CHomePageIndicator"></activity>
 
         <!--  ok animation -->
+        <!--  ok test -->
+        <activity
+            android:name="com.xian.myapp.activities.TestActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <!--  ok test -->
     </application>
 </manifest>
