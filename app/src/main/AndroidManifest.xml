@@ -288,6 +288,22 @@
             android:theme="@style/Theme.CHomePageIndicator"></activity>
 
         <!--  ok animation -->
+        <!--  ok aidl -->
+        <activity
+            android:name="com.xian.myapp.activities.AidlActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <service android:name=".activities.AidlService" />
+        <activity
+            android:name="com.xian.myapp.activities.BindActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <service android:name=".activities.BindService" />
+        <!--  ok aidl -->
         <!--  ok test -->
         <activity
             android:name="com.xian.myapp.activities.TestActivity"
