@@ -295,7 +295,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.CHomePageIndicator"></activity>
 
-        <service android:name=".activities.AidlService" />
+        <service android:name=".activities.AidlService" android:process=":remote" />
         <activity
             android:name="com.xian.myapp.activities.BindActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"

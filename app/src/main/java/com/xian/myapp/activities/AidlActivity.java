@@ -14,11 +14,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.xian.myapp.R;
+import com.xian.myapp.aidl.IRemoteService;
 import com.xian.myapp.base.BaseActivity;
 
 public class AidlActivity extends BaseActivity {
 
-    private AidlService mService;
+    private IRemoteService mIRemoteService;
     private boolean mBound;
 
     private Button btn1;
@@ -39,26 +40,38 @@ public class AidlActivity extends BaseActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                long time=System.nanoTime();
-                Log.e("lmf", "btn1>>>>>"+mService.getStringAndNumber("hello>>"));
-                Log.e("lmf", "btn1>>>>>"+(System.nanoTime()-time)/1000);
+                try {
+                    long time = System.nanoTime();
+                    Log.e("lmf", "btn1>>>>>" + mIRemoteService.getStringAndInt("hello>>"));
+                    Log.e("lmf", "btn1>>>>>" + (System.nanoTime() - time) / 1000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                long time=System.nanoTime();
-                Log.e("lmf", "btn2>>>>>" + mService.getStringAndNumberLongTime("hello>>"));
-                Log.e("lmf", "btn2>>>>>"+(System.nanoTime()-time)/1000);
+                try {
+                    long time = System.nanoTime();
+                    Log.e("lmf", "btn2>>>>>" + mIRemoteService.getStringAndIntLongTime("hello>>"));
+                    Log.e("lmf", "btn2>>>>>" + (System.nanoTime() - time) / 1000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                long time=System.nanoTime();
-                Log.e("lmf", "btn3>>>>>" + mService.getStringAndNumberLongTime("hello>>"));
-                Log.e("lmf", "btn3>>>>>"+(System.nanoTime()-time)/1000);
+                try {
+                    long time = System.nanoTime();
+                   mIRemoteService.getStringAndIntLongTimeOneWay("hello>>");
+                    Log.e("lmf", "btn3>>>>>" + (System.nanoTime() - time) / 1000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
@@ -69,55 +82,72 @@ public class AidlActivity extends BaseActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        long time=System.nanoTime();
-                        Log.e("lmf", "1111>>>>>" + mService.getStringAndNumberLongTime("1111>>"));
-                        Log.e("lmf", "1111>>>>>"+(System.nanoTime()-time)/1000);
+                        try {
+                            long time = System.nanoTime();
+                            Log.e("lmf", "1111>>>>>" + mIRemoteService.getStringAndIntLongTime("111>>"));
+                            Log.e("lmf", "1111>>>>>" + (System.nanoTime() - time) / 1000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 }).start();
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        long time=System.nanoTime();
-                        Log.e("lmf", "2222>>>>>" + mService.getStringAndNumberLongTime("222>>"));
-                        Log.e("lmf", "2222>>>>>"+(System.nanoTime()-time)/1000);
+                        try {
+                            long time = System.nanoTime();
+                            Log.e("lmf", "2222>>>>>" + mIRemoteService.getStringAndIntLongTime("222>>"));
+                            Log.e("lmf", "2222>>>>>" + (System.nanoTime() - time) / 1000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 }).start();
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        long time=System.nanoTime();
-                        Log.e("lmf", "333>>>>>" + mService.getStringAndNumberLongTime("333>>"));
-                        Log.e("lmf", "333>>>>>"+(System.nanoTime()-time)/1000);
+                        try {
+                            long time = System.nanoTime();
+                            Log.e("lmf", "333>>>>>" + mIRemoteService.getStringAndIntLongTime("333>>"));
+                            Log.e("lmf", "333>>>>>" + (System.nanoTime() - time) / 1000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 }).start();
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        long time=System.nanoTime();
-                        Log.e("lmf", "444>>>>>" + mService.getStringAndNumberLongTime("4444>>"));
-                        Log.e("lmf", "444>>>>>"+(System.nanoTime()-time)/1000);
+                        try {
+                            long time = System.nanoTime();
+                            Log.e("lmf", "444>>>>>" + mIRemoteService.getStringAndIntLongTime("4444>>"));
+                            Log.e("lmf", "444>>>>>" + (System.nanoTime() - time) / 1000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 }).start();
 
             }
         });
     }
+
     private ServiceConnection mConnection = new ServiceConnection() {
 
         @Override
         public void onServiceConnected(ComponentName className,
                                        IBinder service) {
             // We've bound to LocalService, cast the IBinder and get LocalService instance
-            AidlService.LocalBinder binder = (AidlService.LocalBinder) service;
-            mService = binder.getService();
+            mIRemoteService = IRemoteService.Stub.asInterface(service);
             mBound = true;
             text.setText("服务器启动了");
-            Log.e("lmf","onServiceConnected>>>>>");
+            Log.e("lmf", "onServiceConnected>>>>>");
         }
 
         @Override
         public void onServiceDisconnected(ComponentName arg0) {
             mBound = false;
+            mIRemoteService = null;
             text.setText("服务器没有启动");
             Log.e("lmf", "onServiceDisconnected>>>>>");
         }
