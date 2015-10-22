@@ -53,9 +53,5 @@ public class TouchActivity extends BaseActivity {
         return result;
     }
 
-    @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
-        Log.e("lmf",">>>>>onSaveInstanceState>>>>>>");
-    }
+
 }
