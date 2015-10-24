@@ -30,6 +30,13 @@ public class TestActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
+
+
+        int i=getIntent().getIntExtra("test",-1);
+        int j=getIntent().getExtras().getInt("test", -1);
+
+        Log.e("lmf","<<>>>>>"+i+":"+j);
+
         btn = (Button) findViewById(R.id.btn1);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +47,7 @@ public class TestActivity extends BaseActivity {
                 Intent attackIntent = new Intent();
                 attackIntent.setComponent(new ComponentName(packageName, className));
                 attackIntent.putExtra("error data", new ErrorData());
+                attackIntent.putExtra("test", 10);
                 startActivity(attackIntent);
             }
         });

@@ -77,6 +77,12 @@ public class MyActivity extends BaseActivity {
                         try {
                             GsonMainActivityInfo info = mGsonActivitys.data.get(position);
                             Intent intent = new Intent(mContext, Class.forName(info.activityClassName));
+
+                            Bundle bundle=new Bundle();
+                            bundle.putInt("test", 1000);
+                            intent.putExtras(bundle);
+                            intent.putExtra("test", 10);
+
                             startActivity(intent);
                         } catch (Exception e) {
                             e.printStackTrace();

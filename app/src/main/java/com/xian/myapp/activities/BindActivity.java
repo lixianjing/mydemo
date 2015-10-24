@@ -28,7 +28,7 @@ public class BindActivity extends BaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aidl);
+        setContentView(R.layout.activity_bind);
         text = (TextView) findViewById(R.id.text1);
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);

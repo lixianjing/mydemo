@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:padding="50dp"
         android:background="#663344"
-        android:onClick="true"
         android:layout_centerInParent="true"
         android:layout_height="match_parent">
 
@@ -16,10 +15,16 @@
         <com.xian.myapp.widget.MyLayout2
             android:layout_width="match_parent"
             android:background="#EEFFAA"
-            android:onClick="true"
+            android:padding="50dp"
             android:layout_centerInParent="true"
             android:layout_height="match_parent">
+            <com.xian.myapp.widget.MyView
+                android:layout_width="match_parent"
+                android:background="#11FFAA"
+                android:layout_centerInParent="true"
+                android:layout_height="match_parent">
 
+            </com.xian.myapp.widget.MyView>
         </com.xian.myapp.widget.MyLayout2>
 
 

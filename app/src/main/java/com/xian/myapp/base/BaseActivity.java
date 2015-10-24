@@ -102,16 +102,13 @@ public class BaseActivity extends FragmentActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        configCloseAnimation();
         ((MyApplication)getApplication()).removeActivity(this);
-        Log.e("lmf",">>>>>onBackPressed>>>>"+this);
     }
 
     @Override
     public void finish() {
         super.finish();
-        overridePendingTransition(R.anim.anim_enter_left, R.anim.anim_leave_right);
-        Log.e("lmf",">>>>>finish>>>>"+this);
+
     }
 
     /**
