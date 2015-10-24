@@ -151,6 +151,11 @@ public class MyActivity extends BaseActivity {
             holder.nameTv.setText(infos.get(position).name);
             return convertView;
         }
+
+        @Override
+        public boolean hasStableIds() {
+            return true;
+        }
     }
 
     private final class ViewHolder {

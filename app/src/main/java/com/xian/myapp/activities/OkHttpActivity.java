@@ -35,11 +35,17 @@ public class OkHttpActivity extends BaseActivity {
                     }
                     break;
                 case R.id.btn2:
-                    try {
-                        runUi("http://www.baidu.com");
-                    }catch (Exception e){
-                        e.printStackTrace();
-                    }
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                runUi("http://www.baidu.com");
+                            }catch (Exception e){
+                                e.printStackTrace();
+                            }
+                        }
+                    }).start();
+
                     break;
                 case R.id.btn3:
                     break;
@@ -80,6 +86,7 @@ public class OkHttpActivity extends BaseActivity {
                 Log.e("lmf", ">>>>>onResponse>>>>>>" + response.body().toString());
             }
         });
+
 
     }
 

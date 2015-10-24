@@ -7,6 +7,7 @@ import android.os.Environment;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
+import android.util.LruCache;
 import android.view.View;
 import android.view.ViewStub;
 import android.widget.Button;
