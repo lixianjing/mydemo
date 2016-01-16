@@ -29,7 +29,7 @@ public class MyApplication extends Application {
         Envi.initialize(this);
         if(shouldInit()){
             SLLog.e("lmf",">>>>>MyApplication>>>>>onCreate>>isfirst>>");
-//            init();
+            init();
         }
     }
 

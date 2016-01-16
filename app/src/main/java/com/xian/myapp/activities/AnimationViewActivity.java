@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
@@ -35,6 +36,7 @@ public class AnimationViewActivity extends BaseActivity {
     private TextView rotate;
     private TextView scale;
     private TextView alpha;
+    private TextView more;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class AnimationViewActivity extends BaseActivity {
         rotate = (TextView) findViewById(R.id.rotate);
         scale = (TextView) findViewById(R.id.scale);
         alpha = (TextView) findViewById(R.id.alpha);
+        more=(TextView)findViewById(R.id.more);
 
         btn1.setOnClickListener(new View.OnClickListener() {
 
@@ -54,7 +57,7 @@ public class AnimationViewActivity extends BaseActivity {
                 // TODO Auto-generated method stub
                 // 1&2: 确定起始状态，结束状态
                 TranslateAnimation tAnim = new TranslateAnimation(0, 400, 0, 0);//横向位移400个单位
-                RotateAnimation rAnima = new RotateAnimation(0, 70);//顺时针旋转70度
+                RotateAnimation rAnima = new RotateAnimation(0, 70,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);//顺时针旋转70度
                 ScaleAnimation sAnima = new ScaleAnimation(0, 5, 0, 5);//横向放大5倍，纵向放大5倍
                 AlphaAnimation aAnima = new AlphaAnimation(1.0f, 0.0f);//从全不透明变为全透明
                 // 3: 确定持续时间
@@ -66,11 +69,16 @@ public class AnimationViewActivity extends BaseActivity {
                 // 4: 确定Interpolator
                 tAnim.setInterpolator(new AccelerateDecelerateInterpolator());
 
+                AnimationSet set=new AnimationSet(false);
+                set.addAnimation(tAnim);
+                set.addAnimation(rAnima);
+
                 // 启动动画
                 translation.startAnimation(tAnim);
                 rotate.startAnimation(rAnima);
                 scale.startAnimation(sAnima);
                 alpha.startAnimation(aAnima);
+                more.startAnimation(set);
             }
         });
 

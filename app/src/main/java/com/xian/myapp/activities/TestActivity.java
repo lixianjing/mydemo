@@ -42,13 +42,8 @@ public class TestActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                String packageName = "com.ganji.android";
-                String className = "com.ganji.android.control.LaunchActivity";
-                Intent attackIntent = new Intent();
-                attackIntent.setComponent(new ComponentName(packageName, className));
-                attackIntent.putExtra("error data", new ErrorData());
-                attackIntent.putExtra("test", 10);
-                startActivity(attackIntent);
+
+
             }
         });
     }

@@ -39,7 +39,7 @@ public class MyFragmentActivity3 extends FragmentActivity   {
             @Override
             public void onClick(View v) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.add(R.id.content, FragmentParent.newInstance(0));
+                ft.replace(R.id.content, FragmentParent.newInstance(0));
                 ft.addToBackStack(null);
                 ft.commit();
             }

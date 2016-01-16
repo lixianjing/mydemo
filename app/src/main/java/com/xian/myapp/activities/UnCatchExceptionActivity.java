@@ -25,7 +25,7 @@ public class UnCatchExceptionActivity extends BaseActivity {
 
     MyApplication app;
 
-    private String s;
+    private String s=null;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
