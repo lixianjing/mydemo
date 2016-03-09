@@ -304,6 +304,14 @@
 
         <service android:name=".activities.BindService" />
         <!--  ok aidl -->
+        <!--  ok expandable -->
+        <activity
+            android:name="com.xian.myapp.activities.ExpandableListviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <!--  ok expandable -->
         <!--  ok test -->
         <activity
             android:name="com.xian.myapp.activities.TestActivity"
