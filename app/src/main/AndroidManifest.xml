@@ -323,6 +323,14 @@
             android:theme="@style/Theme.CHomePageIndicator"></activity>
 
         <!--  ok expandable -->
+        <!--  ok expandable -->
+        <activity
+            android:name="com.xian.myapp.activities.FragmentTestActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CHomePageIndicator"></activity>
+
+        <!--  ok expandable -->
 
         <!--  ok test -->
         <activity

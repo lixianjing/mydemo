@@ -1,21 +1,16 @@
 package com.xian.myapp.activities;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.xian.myapp.R;
@@ -31,7 +26,7 @@ public class MyFragmentActivity3 extends FragmentActivity   {
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
-        setContentView(R.layout.fragment_test3);
+        setContentView(R.layout.fragment_inner_test3);
         TextView textView = (TextView) findViewById(R.id.text);
         textView.setText("root");
         Button btn = (Button) findViewById(R.id.btn1);
@@ -71,7 +66,7 @@ public class MyFragmentActivity3 extends FragmentActivity   {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View convertView = inflater.inflate(R.layout.fragment_test3, container, false);
+            View convertView = inflater.inflate(R.layout.fragment_inner_test3, container, false);
 
             TextView textView = (TextView) convertView.findViewById(R.id.text);
             Button btn = (Button) convertView.findViewById(R.id.btn1);
