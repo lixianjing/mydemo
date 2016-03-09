@@ -1,8 +1,5 @@
 package com.xian.myapp.activities;
 
-import android.animation.Animator;
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
@@ -11,49 +8,56 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.RotateAnimation;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.xian.myapp.R;
 import com.xian.myapp.base.BaseActivity;
-import com.xian.myapp.model.Flake;
 import com.xian.myapp.openapi.OpenApiController;
 import com.xian.myapp.utils.Utils;
 import com.xian.myapp.volley.VolleyActivity;
 import com.xian.myapp.widget.NormalFlakeView;
-import com.xian.myapp.widget.PropertyFlakeView;
 
-import java.util.ArrayList;
-
-public class AnimationPropertyActivity extends BaseActivity {
+public class FlakePropertyActivity extends BaseActivity {
     /**
      * Called when the activity is first created.
      */
     private Context mContext;
     private Button btn1, btn2;
-    private PropertyFlakeView flakeView;
+    private NormalFlakeView flakeView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animation_property_flake);
+        setContentView(R.layout.activity_animation_view_flake);
         mContext = this;
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
-        flakeView = (PropertyFlakeView) findViewById(R.id.property_flake_view);
+        flakeView = (NormalFlakeView)findViewById(R.id.normal_flake_view);
         btn1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 // 1&2: 确定起始状态，结束状态
-                flakeView.start(BitmapFactory.decodeResource(mContext.getResources(), R.drawable.ic_launcher));
+                flakeView.start(BitmapFactory.decodeResource(mContext.getResources(),R.drawable.ic_launcher));
             }
         });
     }
+
+
 
 
     @Override

@@ -23,7 +23,7 @@ public class AnimationActivity extends BaseActivity {
      */
     private Context mContext;
     private ListView mListView;
-    private String[] items = new String[]{"view animation", "drawable animation", "property animation"};
+    private String[] items = new String[]{"view animation", "drawable animation", "flake property animation","flake","flake view",};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,6 +56,16 @@ public class AnimationActivity extends BaseActivity {
                         startActivity(intent);
                         break;
                     case 3:
+                        //actionbar test
+                        intent = new Intent(mContext, FlakeActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        //actionbar test
+                        intent = new Intent(mContext, FlakePropertyActivity.class);
+                        startActivity(intent);
+                        break;
+
                     default:
                         break;
                 }
