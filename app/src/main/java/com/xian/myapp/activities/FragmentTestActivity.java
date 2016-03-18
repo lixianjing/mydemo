@@ -72,12 +72,12 @@ public class FragmentTestActivity extends FragmentActivity {
 			}
 		});
 
-
-		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 		fragment1=new TestFragment1();
 		fragment2=new TestFragment2();
-		ft.add(R.id.content, fragment1);
-		ft.add(R.id.content, fragment2);
+		fragment3=new TestFragment3();
+
+		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+		ft.replace(R.id.content, fragment1);
 		ft.addToBackStack(null);
 		ft.commit();
 

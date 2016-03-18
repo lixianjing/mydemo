@@ -18,6 +18,7 @@ import com.xian.myapp.activities.TabSecondActivity;
 
 public class TestFragment1 extends Fragment {
 
+    public static boolean isFirst=true;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,16 @@ public class TestFragment1 extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         Log.e("lmf",">>onAttach>>>>>>>>1");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if(isFirst) {
+            FragmentTestActivity mActivity = (FragmentTestActivity) getActivity();
+            mActivity.gotoTwo();
+            isFirst=false;
+        }
     }
 
     @Override
